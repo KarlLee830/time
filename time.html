@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>时间判断</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <script>
+        //获取当前的小时数
+        var hour = new Date().getHours();
+        //根据小时数判断输出什么文字
+        var text = "";
+        if (hour >= 1 && hour <= 5) {
+            text = "凌晨";
+        } else if (hour >= 6 && hour <= 11) {
+            text = "上午";
+        } else if (hour >= 12 && hour <= 17) {
+            text = "下午";
+        } else if (hour >= 18 && hour <= 18) {
+            text = "傍晚";
+        } else if (hour >= 19 && hour <= 23) {
+            text = "晚上";
+        } else if (hour >= 0 && hour <= 0) {
+            text = "半夜";
+        }
+        //将文字显示在网页上
+        document.getElementById("result").innerHTML = text;
+    </script>
+</body>
+</html>
